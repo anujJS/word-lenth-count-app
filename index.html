@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Countlength Web page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <textarea name="" id="text" cols="30" rows="10"></textarea>
+      <div class="box">
+        <span
+          >Characheters =
+          <p class="characters" data-text="characters"></p
+        ></span>
+      </div>
+    </div>
+
+    <script>
+      let text = document.querySelector("#text");
+
+      let characters = document.querySelector(".characters");
+      text.addEventListener("input", () => {
+        characters.textContent = text.value.length;
+      });
+    </script>
+  </body>
+</html>
